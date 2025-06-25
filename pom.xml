@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.alura</groupId>
-	<artifactId>NomeProjeto</artifactId>
+	<artifactId>KitchenCore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>NomeProjeto</name>
 	<description>Primeiro spring sem web</description>
