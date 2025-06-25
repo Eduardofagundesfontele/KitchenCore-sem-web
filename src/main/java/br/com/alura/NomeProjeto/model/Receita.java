@@ -1,21 +1,21 @@
 package br.com.alura.NomeProjeto.model;
 
+// Importa as anotações do Jackson para mapear o JSON
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+// Ignora campos desconhecidos que não estão mapeados no record
 @JsonIgnoreProperties(ignoreUnknown = true)
-// Classe que representa uma receita individual da lista
 public record Receita(
+        // Mapeia o campo "strMeal" do JSON para o nome da receita
         @JsonAlias("strMeal") String nome,
-        @JsonAlias("strMealThumb") String imagem,
-        @JsonAlias("idMeal") String id
-) {
-    // Sobrescreve toString para imprimir os dados de forma legível
-    @Override
-    public String toString() {
-        return "🍽 Receita: " + nome + "\n" +
-                "🖼 Imagem: " + imagem + "\n" +
-                "🆔 ID: " + id + "\n";
-    }
-}
 
+        // Mapeia a imagem da receita (miniatura)
+        @JsonAlias("strMealThumb") String image,
+
+        // Mapeia o ID da receita
+        @JsonAlias("idMeal") String id,
+
+        // Mapeia o campo que traz as instruções da receita
+        @JsonAlias("strInstructions") String instrucoes
+) {}
